@@ -2,18 +2,18 @@ import { useEffect, useState } from 'react'
 import { AbiItem } from 'web3-utils'
 import { ContractOptions } from 'web3-eth-contract'
 import useWeb3 from 'hooks/useWeb3'
-import { getMasterChefAddress, getMangoAddress, getLotteryAddress, getLotteryTicketAddress } from 'utils/addressHelpers'
+import { getMasterChefAddress, getKswapAddress, getLotteryAddress, getLotteryTicketAddress } from 'utils/addressHelpers'
 import { poolsConfig } from 'config/constants'
 import { PoolCategory } from 'config/constants/types'
 import ifo from 'config/abi/ifo.json'
 import erc20 from 'config/abi/erc20.json'
 import rabbitmintingfarm from 'config/abi/rabbitmintingfarm.json'
-import mangoRabbits from 'config/abi/mangoRabbits.json'
+import kswapRabbits from 'config/abi/kswapRabbits.json'
 import lottery from 'config/abi/lottery.json'
 import lotteryTicket from 'config/abi/lotteryNft.json'
 import masterChef from 'config/abi/masterchef.json'
-import mangoChef from 'config/abi/mangoChef.json'
-import mangoChefBnb from 'config/abi/mangoChefBnb.json'
+import kswapChef from 'config/abi/kswapChef.json'
+import kswapChefBnb from 'config/abi/kswapChefBnb.json'
 
 const useContract = (abi: AbiItem, address: string, contractOptions?: ContractOptions) => {
   const web3 = useWeb3()
@@ -40,8 +40,8 @@ export const useERC20 = (address: string) => {
   return useContract(erc20Abi, address)
 }
 
-export const useMango = () => {
-  return useERC20(getMangoAddress())
+export const useKswap = () => {
+  return useERC20(getKswapAddress())
 }
 
 export const useRabbitMintingFarm = (address: string) => {
@@ -50,8 +50,8 @@ export const useRabbitMintingFarm = (address: string) => {
 }
 
 export const usePanmangoRabbits = (address: string) => {
-  const mangoRabbitsAbi = (mangoRabbits as unknown) as AbiItem
-  return useContract(mangoRabbitsAbi, address)
+  const kswapRabbitsAbi = (kswapRabbits as unknown) as AbiItem
+  return useContract(kswapRabbitsAbi, address)
 }
 
 export const useLottery = () => {
@@ -69,9 +69,9 @@ export const useMasterchef = () => {
   return useContract(abi, getMasterChefAddress())
 }
 
-export const useMangoChef = (id) => {
+export const useKswapChef = (id) => {
   const config = poolsConfig.find((pool) => pool.juiceId === id)
-  const rawAbi = config.poolCategory === PoolCategory.BINANCE ? mangoChefBnb : mangoChef
+  const rawAbi = config.poolCategory === PoolCategory.BINANCE ? kswapChefBnb : kswapChef
   const abi = (rawAbi as unknown) as AbiItem
   return useContract(abi, config.contractAddress[process.env.REACT_APP_CHAIN_ID])
 }
