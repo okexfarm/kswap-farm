@@ -7,16 +7,16 @@ import useI18n from 'hooks/useI18n'
 import { useAllHarvest } from 'hooks/useHarvest'
 import useFarmsWithBalance from 'hooks/useFarmsWithBalance'
 import UnlockButton from 'components/UnlockButton'
-import MangoHarvestBalance from './MangoHarvestBalance'
-import MangoWalletBalance from './MangoWalletBalance'
+import KswaparvestBalance from './KswapHarvestBalance'
+import KswapWalletBalance from './KswapWalletBalance'
 import { usePriceMangoBusd } from '../../../state/hooks'
 import useTokenBalance from '../../../hooks/useTokenBalance'
-import { getMangoAddress } from '../../../utils/addressHelpers'
+import { getKswapAddress } from '../../../utils/addressHelpers'
 import useAllEarnings from '../../../hooks/useAllEarnings'
 import { getBalanceNumber } from '../../../utils/formatBalance'
 
 const StyledFarmStakingCard = styled(Card)`
-  background-image: url('/images/mango-bg.svg');
+  background-image: url('/images/kswap-bg.svg');
   background-repeat: no-repeat;
   background-position: top right;
   min-height: 376px;
@@ -44,8 +44,8 @@ const FarmedStakingCard = () => {
   const { account } = useWallet()
   const TranslateString = useI18n()
   const farmsWithBalance = useFarmsWithBalance()
-  const mangoBalance = getBalanceNumber(useTokenBalance(getMangoAddress()))
-  const mangoPrice = usePriceMangoBusd().toNumber()
+  const kswapBalance = getBalanceNumber(useTokenBalance(getMangoAddress()))
+  const kswapPrice = usePriceMangoBusd().toNumber()
   const allEarnings = useAllEarnings()
   const earningsSum = allEarnings.reduce((accum, earning) => {
     return accum + new BigNumber(earning).div(new BigNumber(10).pow(18)).toNumber()
@@ -71,16 +71,16 @@ const FarmedStakingCard = () => {
         <Heading size="xl" mb="24px">
           {TranslateString(542, 'Farms & Staking')}
         </Heading>
-        <CardImage src="/images/mango.svg" alt="mango logo" width={64} height={64} />
+        <CardImage src="/images/kswap.svg" alt="kswap logo" width={64} height={64} />
         <Block>
-          <Label>{TranslateString(544, 'MANGO to Harvest')}</Label>
-          <MangoHarvestBalance earningsSum={earningsSum} />
-          <Label>~${(mangoPrice * earningsSum).toFixed(2)}</Label>
+          <Label>{TranslateString(544, 'KSWAP to Harvest')}</Label>
+          <KswapHarvestBalance earningsSum={earningsSum} />
+          <Label>~${(kswapPrice * earningsSum).toFixed(2)}</Label>
         </Block>
         <Block>
-          <Label>{TranslateString(546, 'MANGO in Wallet')}</Label>
-          <MangoWalletBalance mangoBalance={mangoBalance} />
-          <Label>~${(mangoPrice * mangoBalance).toFixed(2)}</Label>
+          <Label>{TranslateString(546, 'KSWAP in Wallet')}</Label>
+          <KswapWalletBalance kswapBalance={kswapBalance} />
+          <Label>~${(kswapPrice * kswapBalance).toFixed(2)}</Label>
         </Block>
         <Actions>
           {account ? (
@@ -91,7 +91,7 @@ const FarmedStakingCard = () => {
               fullWidth
             >
               {pendingTx
-                ? TranslateString(548, 'Collecting MANGO')
+                ? TranslateString(548, 'Collecting KSWAP')
                 : TranslateString(999, `Harvest all (${balancesWithValue.length})`)}
             </Button>
           ) : (
