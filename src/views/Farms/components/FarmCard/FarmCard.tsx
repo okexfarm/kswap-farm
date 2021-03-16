@@ -90,14 +90,14 @@ interface FarmCardProps {
   account?: string
 }
 
-const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, mangoPrice, bnbPrice, ethereum, account }) => {
+const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, kswapPrice, bnbPrice, ethereum, account }) => {
   const TranslateString = useI18n()
 
   const [showExpandableSection, setShowExpandableSection] = useState(false)
 
   // const isCommunityFarm = communityFarms.includes(farm.tokenSymbol)
-  // We assume the token name is coin pair + lp e.g. MANGO-BNB LP, LINK-BNB LP,
-  // NAR-MANGO LP. The images should be mango-bnb.svg, link-bnb.svg, nar-mango.svg
+  // We assume the token name is coin pair + lp e.g. KSWAP-BNB LP, LINK-BNB LP,
+  // NAR-KSWAP LP. The images should be kswap-bnb.svg, link-bnb.svg, nar-kswap.svg
   // const farmImage = farm.lpSymbol.split(' ')[0].toLocaleLowerCase()
   const farmImage = farm.isTokenOnly
     ? farm.tokenSymbol.toLowerCase()
@@ -121,7 +121,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, mangoPrice, bnbPrice
     : '-'
 
   const lpLabel = farm.lpSymbol
-  const earnLabel = 'MANGO'
+  const earnLabel = 'KSWAP'
   const farmAPY =
     farm.apy &&
     farm.apy.times(new BigNumber(100)).toNumber().toLocaleString(undefined, {
@@ -133,7 +133,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, mangoPrice, bnbPrice
 
   return (
     <FCard>
-      {farm.tokenSymbol === 'MANGO' && <StyledCardAccent />}
+      {farm.tokenSymbol === 'KSWAP' && <StyledCardAccent />}
       <CardHeading
         lpLabel={lpLabel}
         multiplier={farm.multiplier}
