@@ -5,11 +5,11 @@ import styled from 'styled-components'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalSupply, useBurnedBalance } from 'hooks/useTokenBalance'
 import useI18n from 'hooks/useI18n'
-import { getMangoAddress } from 'utils/addressHelpers'
+import { getKswapAddress } from 'utils/addressHelpers'
 import CardValue from './CardValue'
-import { useFarms, usePriceMangoBusd } from '../../../state/hooks'
+import { useFarms, usePriceKswapBusd } from '../../../state/hooks'
 
-const StyledMangoStats = styled(Card)`
+const StyledKswapStats = styled(Card)`
   margin-left: auto;
   margin-right: auto;
 `
@@ -22,26 +22,26 @@ const Row = styled.div`
   margin-bottom: 8px;
 `
 
-const MangoStats = () => {
+const KswapStats = () => {
   const TranslateString = useI18n()
   const totalSupply = useTotalSupply()
-  const burnedBalance = useBurnedBalance(getMangoAddress())
+  const burnedBalance = useBurnedBalance(getKswapAddress())
   const farms = useFarms()
-  const mangoPrice = usePriceMangoBusd()
+  const kswapPrice = usePriceKswapBusd()
   const circSupply = totalSupply ? totalSupply.minus(burnedBalance) : new BigNumber(0)
-  const mangoSupply = getBalanceNumber(circSupply)
-  const marketCap = mangoPrice.times(circSupply)
+  const kswapSupply = getBalanceNumber(circSupply)
+  const marketCap = kswapPrice.times(circSupply)
 
-  let mangoPerBlock = 0
-  if (farms && farms[0] && farms[0].mangoPerBlock) {
-    mangoPerBlock = new BigNumber(farms[0].mangoPerBlock).div(new BigNumber(10).pow(18)).toNumber()
+  let kswapPerBlock = 0
+  if (farms && farms[0] && farms[0].kswapPerBlock) {
+    kswapPerBlock = new BigNumber(farms[0].kswapPerBlock).div(new BigNumber(10).pow(18)).toNumber()
   }
 
   return (
-    <StyledMangoStats>
+    <StyledKswapStats>
       <CardBody>
         <Heading size="xl" mb="24px">
-          {TranslateString(534, 'Mango Stats')}
+          {TranslateString(534, 'Kswap Stats')}
         </Heading>
         <Row>
           <Text fontSize="14px">{TranslateString(10005, 'Market Cap')}</Text>
@@ -57,17 +57,17 @@ const MangoStats = () => {
         </Row>
         <Row>
           <Text fontSize="14px">{TranslateString(10004, 'Circulating Supply')}</Text>
-          {mangoSupply && <CardValue fontSize="14px" value={mangoSupply} decimals={0} />}
+          {kswapSupply && <CardValue fontSize="14px" value={mangoSupply} decimals={0} />}
         </Row>
         <Row>
-          <Text fontSize="14px">{TranslateString(540, 'New MANGO/block')}</Text>
+          <Text fontSize="14px">{TranslateString(540, 'New KSWAP/block')}</Text>
           <Text bold fontSize="14px">
-            {mangoPerBlock}
+            {kswapPerBlock}
           </Text>
         </Row>
       </CardBody>
-    </StyledMangoStats>
+    </StyledKswapStats>
   )
 }
 
-export default MangoStats
+export default KswapStats
