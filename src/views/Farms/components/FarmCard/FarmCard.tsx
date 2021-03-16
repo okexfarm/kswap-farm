@@ -84,7 +84,7 @@ const ExpandingWrapper = styled.div<{ expanded: boolean }>`
 interface FarmCardProps {
   farm: FarmWithStakedValue
   removed: boolean
-  mangoPrice?: BigNumber
+  kswapPrice?: BigNumber
   bnbPrice?: BigNumber
   ethereum?: provider
   account?: string
@@ -111,10 +111,10 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, kswapPrice, bnbPrice
       return bnbPrice.times(farm.lpTotalInQuoteToken)
     }
     if (farm.quoteTokenSymbol === QuoteToken.MANGO) {
-      return mangoPrice.times(farm.lpTotalInQuoteToken)
+      return kswapPrice.times(farm.lpTotalInQuoteToken)
     }
     return farm.lpTotalInQuoteToken
-  }, [bnbPrice, mangoPrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol])
+  }, [bnbPrice, kswapPrice, farm.lpTotalInQuoteToken, farm.quoteTokenSymbol])
 
   const totalValueFormated = totalValue
     ? `$${Number(totalValue).toLocaleString(undefined, { maximumFractionDigits: 0 })}`
@@ -153,7 +153,7 @@ const FarmCard: React.FC<FarmCardProps> = ({ farm, removed, kswapPrice, bnbPrice
                   quoteTokenAdresses={quoteTokenAdresses}
                   quoteTokenSymbol={quoteTokenSymbol}
                   tokenAddresses={tokenAddresses}
-                  mangoPrice={mangoPrice}
+                  kswapPrice={kswapPrice}
                   apy={farm.apy}
                 />
                 {farmAPY}%
