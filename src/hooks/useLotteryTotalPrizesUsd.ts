@@ -4,10 +4,10 @@ import { useTotalRewards } from './useTickets'
 
 const useLotteryTotalPrizesUsd = () => {
   const totalRewards = useTotalRewards()
-  const totalMango = getBalanceNumber(totalRewards)
-  const mangoPriceBusd = usePriceMangoBusd()
+  const totalKswap = getBalanceNumber(totalRewards)
+  const kswapPriceBusd = usePriceKswapBusd()
 
-  return totalMango * mangoPriceBusd.toNumber()
+  return totalKswap * kswapPriceBusd.toNumber()
 }
 
 export default useLotteryTotalPrizesUsd
