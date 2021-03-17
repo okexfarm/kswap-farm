@@ -55,11 +55,11 @@ const ComingSoon = () => {
       <Content>
         <div>
           <Block>
-            <Title as="h2">{TranslateString(999, 'Coming Soon to PanmangoSwap.')}</Title>
+            <Title as="h2">{TranslateString(999, 'Coming Soon to PankswapSwap.')}</Title>
             <Text mb={3}>
               {TranslateString(
                 504,
-                'You’ll pay for the new tokens using MANGO-BNB LP tokens, which means you need to stake equal amounts of MANGO and BNB in a liquidity pool to take part.',
+                'You’ll pay for the new tokens using KSWAP-BNB LP tokens, which means you need to stake equal amounts of KSWAP and BNB in a liquidity pool to take part.',
               )}
             </Text>
             <Text mb={3}>
@@ -79,7 +79,7 @@ const ComingSoon = () => {
             <Text mb={3}>
               {TranslateString(
                 514,
-                'Launch your project with PanmangoSwap, Binance Smart Chain’s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on BSC.',
+                'Launch your project with PankswapSwap, Binance Smart Chain’s most-used AMM project and liquidity provider, to bring your token directly to the most active and rapidly growing community on BSC.',
               )}
             </Text>
             <Button
