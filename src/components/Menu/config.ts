@@ -28,7 +28,7 @@ const config: MenuEntry[] = [
    {
      label: 'Juice',
      icon: 'PoolIcon',
-     href: '/mango',
+     href: '/kswap',
   },
   // {
   //   label: 'Pools',
