@@ -18,7 +18,7 @@ const ApyButton: React.FC<ApyButtonProps> = ({
   quoteTokenAdresses,
   quoteTokenSymbol,
   tokenAddresses,
-  kswaprice,
+  kswapprice,
   apy,
 }) => {
   const [onPresentApyModal] = useModal(
