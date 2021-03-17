@@ -34,7 +34,7 @@ const IfoCardDetails: React.FC<IfoCardDetailsProps> = ({
   launchTime,
   saleAmount,
   raiseAmount,
-  mangoToBurn,
+  kswapToBurn,
   projectSiteUrl,
   raisingAmount,
   totalAmount,
