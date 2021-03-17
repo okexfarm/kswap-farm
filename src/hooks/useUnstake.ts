@@ -29,7 +29,7 @@ const useUnstake = (pid: number) => {
 
 const JUICEIDS = []
 
-export const useMangoUnstake = (juiceId) => {
+export const useKswapUnstake = (juiceId) => {
   const dispatch = useDispatch()
   const { account } = useWallet()
   const masterChefContract = useMasterchef()
