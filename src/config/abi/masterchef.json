@@ -2,7 +2,7 @@
   {
     "inputs": [
       {
-        "internalType": "contract KswapFarm",
+        "internalType": "contract Kswap",
         "name": "_kswap",
         "type": "address"
       },
@@ -264,7 +264,7 @@
     "name": "kswap",
     "outputs": [
       {
-        "internalType": "contract KswapFarm",
+        "internalType": "contract Kswap",
         "name": "",
         "type": "address"
       }
