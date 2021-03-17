@@ -62,7 +62,7 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
     }
   }, [maxTickets])
 
-  const mangoCosts = (amount: string): number => {
+  const kswapCosts = (amount: string): number => {
     return +amount * 10
   }
   return (
@@ -73,20 +73,20 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
         onChange={handleChange}
         max={fullBalance}
         symbol="TICKET"
-        availableSymbol="MANGO"
+        availableSymbol="KSWAP"
       />
       <div>
-        <Tips>{TranslateString(456, 'Your amount must be a multiple of 10 MANGO')}</Tips>
-        <Tips>{TranslateString(458, '1 Ticket = 10 MANGO')}</Tips>
+        <Tips>{TranslateString(456, 'Your amount must be a multiple of 10 KSWAP')}</Tips>
+        <Tips>{TranslateString(458, '1 Ticket = 10 KSWAP')}</Tips>
       </div>
       <div>
         <Announce>
           {TranslateString(
             478,
-            'Ticket purchases are final. Your MANGO cannot be returned to you after buying tickets.',
+            'Ticket purchases are final. Your KSWAP cannot be returned to you after buying tickets.',
           )}
         </Announce>
-        <Final>{TranslateString(460, `You will spend: ${mangoCosts(val)} MANGO`)}</Final>
+        <Final>{TranslateString(460, `You will spend: ${mangoCosts(val)} KSWAP`)}</Final>
       </div>
       <ModalActions>
         <Button fullWidth variant="secondary" onClick={onDismiss}>
