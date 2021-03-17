@@ -10,7 +10,7 @@
 
 # testing
 /coverage
-/mango
+/kswap
 # next.js
 /.next/
 /out/
