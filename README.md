@@ -1,4 +1,4 @@
-#  🥭 Mango Frontend
+#  🥭 Kswap Frontend
 
 
-This project contains the main features of the mango application.
+This project contains the main features of the kswap application.
