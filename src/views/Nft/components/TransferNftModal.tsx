@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import Web3 from 'web3'
 import { useWallet } from '@binance-chain/bsc-use-wallet'
 import { Button, Input, Modal, Text } from '@mangofarm/uikit'
-import { PANMANGO_RABBITS_ADDRESS } from 'config/constants/nfts'
+import { PANKSWAP_RABBITS_ADDRESS } from 'config/constants/nfts'
 import { Nft } from 'config/constants/types'
 import useI18n from 'hooks/useI18n'
-import { usePanmangoRabbits } from 'hooks/useContract'
+import { usePankswapRabbits } from 'hooks/useContract'
 import InfoRow from './InfoRow'
 
 interface TransferNftModalProps {
@@ -43,7 +43,7 @@ const TransferNftModal: React.FC<TransferNftModalProps> = ({ nft, tokenIds, onSu
   const [error, setError] = useState(null)
   const TranslateString = useI18n()
   const { account } = useWallet()
-  const mangoRabbitsContract = usePanmangoRabbits(PANMANGO_RABBITS_ADDRESS)
+  const kswapRabbitsContract = usePankswapRabbits(PANKSWAP_RABBITS_ADDRESS)
 
   const handleConfirm = async () => {
     try {
