@@ -6,13 +6,13 @@ import { useWallet } from '@binance-chain/bsc-use-wallet'
 import UnlockButton from 'components/UnlockButton'
 import Label from 'components/Label'
 import { useERC20 } from 'hooks/useContract'
-import { useMangoApprove } from 'hooks/useApprove'
+import { useKswapApprove } from 'hooks/useApprove'
 import useI18n from 'hooks/useI18n'
-import { useMangoStake } from 'hooks/useStake'
-import { useMangoUnstake } from 'hooks/useUnstake'
+import { useKswapStake } from 'hooks/useStake'
+import { useKswapUnstake } from 'hooks/useUnstake'
 import useBlock from 'hooks/useBlock'
 import { getBalanceNumber } from 'utils/formatBalance'
-import { useMangoHarvest } from 'hooks/useHarvest'
+import { useKswapHarvest } from 'hooks/useHarvest'
 import Balance from 'components/Balance'
 import { QuoteToken, PoolCategory } from 'config/constants/types'
 import { Pool } from 'state/types'
@@ -58,10 +58,10 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
   const stakingTokenContract = useERC20(stakingTokenAddress)
   const { account } = useWallet()
   const block = useBlock()
-  const { onApprove } = useMangoApprove(stakingTokenContract, juiceId)
-  const { onStake } = useMangoStake(juiceId, isBnbPool)
-  const { onUnstake } = useMangoUnstake(juiceId)
-  const { onReward } = useMangoHarvest(juiceId, isBnbPool)
+  const { onApprove } = useKswapApprove(stakingTokenContract, juiceId)
+  const { onStake } = useKswapStake(juiceId, isBnbPool)
+  const { onUnstake } = useKswapUnstake(juiceId)
+  const { onReward } = useKswapHarvest(juiceId, isBnbPool)
 
   const [requestedApproval, setRequestedApproval] = useState(false)
   const [pendingTx, setPendingTx] = useState(false)
