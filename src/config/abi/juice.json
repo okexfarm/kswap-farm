@@ -2,8 +2,8 @@
   {
     "inputs": [
       {
-        "internalType": "contract MangoToken",
-        "name": "_mango",
+        "internalType": "contract KswapToken",
+        "name": "_kswap",
         "type": "address"
       }
     ],
@@ -242,10 +242,10 @@
   },
   {
     "inputs": [],
-    "name": "mango",
+    "name": "kswap",
     "outputs": [
       {
-        "internalType": "contract MangoToken",
+        "internalType": "contract KswapToken",
         "name": "",
         "type": "address"
       }
@@ -590,7 +590,7 @@
         "type": "uint256"
       }
     ],
-    "name": "safeMangoTransfer",
+    "name": "safeKswapTransfer",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
