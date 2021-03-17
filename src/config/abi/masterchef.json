@@ -2,7 +2,7 @@
   {
     "inputs": [
       {
-        "internalType": "contract MangoFarm",
+        "internalType": "contract KswapFarm",
         "name": "_kswap",
         "type": "address"
       },
@@ -261,10 +261,10 @@
   },
   {
     "inputs": [],
-    "name": "mango",
+    "name": "kswap",
     "outputs": [
       {
-        "internalType": "contract MangoFarm",
+        "internalType": "contract KswapFarm",
         "name": "",
         "type": "address"
       }
@@ -318,7 +318,7 @@
         "type": "address"
       }
     ],
-    "name": "pendingMango",
+    "name": "pendingKswap",
     "outputs": [
       {
         "internalType": "uint256",
