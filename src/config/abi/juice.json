@@ -2,7 +2,7 @@
   {
     "inputs": [
       {
-        "internalType": "contract KswapToken",
+        "internalType": "contract Kswap",
         "name": "_kswap",
         "type": "address"
       }
@@ -245,7 +245,7 @@
     "name": "kswap",
     "outputs": [
       {
-        "internalType": "contract KswapToken",
+        "internalType": "contract Kswap",
         "name": "",
         "type": "address"
       }
