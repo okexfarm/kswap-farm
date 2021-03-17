@@ -1,4 +1,4 @@
-import { calculateMangoEarnedPerThousandDollars, apyModalRoi } from '../utils/compoundApyHelpers'
+import { calculateKswapEarnedPerThousandDollars, apyModalRoi } from '../utils/compoundApyHelpers'
 
 it.each([
   [{ numberOfDays: 1, farmApy: 365, mangoPrice: 1 }, 10],
@@ -7,8 +7,8 @@ it.each([
   [{ numberOfDays: 330, farmApy: 45.12, mangoPrice: 5 }, 100.67],
   [{ numberOfDays: 365, farmApy: 100, mangoPrice: 0.2 }, 8572.84],
   [{ numberOfDays: 365, farmApy: 20, mangoPrice: 1 }, 221.34],
-])('calculate mango earned with values %o', ({ numberOfDays, farmApy, mangoPrice }, expected) => {
-  expect(calculateMangoEarnedPerThousandDollars({ numberOfDays, farmApy, mangoPrice })).toEqual(expected)
+])('calculate kswap earned with values %o', ({ numberOfDays, farmApy, kswapPrice }, expected) => {
+  expect(calculateKswapEarnedPerThousandDollars({ numberOfDays, farmApy, kswapPrice })).toEqual(expected)
 })
 
 it.each([
