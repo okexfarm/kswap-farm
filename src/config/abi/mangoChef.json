@@ -3,7 +3,7 @@
     "inputs": [
       {
         "internalType": "contract MangoFarm",
-        "name": "_mango",
+        "name": "_kswap",
         "type": "address"
       },
       {
@@ -18,7 +18,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "_mangoPerBlock",
+        "name": "_kswapPerBlock",
         "type": "uint256"
       },
       {
@@ -274,7 +274,7 @@
   },
   {
     "inputs": [],
-    "name": "mangoPerBlock",
+    "name": "kswapPerBlock",
     "outputs": [
       {
         "internalType": "uint256",
@@ -318,7 +318,7 @@
         "type": "address"
       }
     ],
-    "name": "pendingMango",
+    "name": "pendingKswap",
     "outputs": [
       {
         "internalType": "uint256",
@@ -356,7 +356,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "accMangoPerShare",
+        "name": "accKswapPerShare",
         "type": "uint256"
       },
       {
@@ -472,7 +472,7 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_mangoPerBlock",
+        "name": "_kswapPerBlock",
         "type": "uint256"
       }
     ],
