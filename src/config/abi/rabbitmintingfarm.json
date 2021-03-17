@@ -48,7 +48,7 @@
   },
   {
     "inputs": [],
-    "name": "mangoPerBurn",
+    "name": "kswapPerBurn",
     "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"
@@ -119,7 +119,7 @@
   {
     "inputs": [],
     "name": "kswapBunnies",
-    "outputs": [{ "internalType": "contract PanmangoBunnies", "name": "", "type": "address" }],
+    "outputs": [{ "internalType": "contract PankswapBunnies", "name": "", "type": "address" }],
     "stateMutability": "view",
     "type": "function"
   },
