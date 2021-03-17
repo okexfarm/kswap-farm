@@ -88,6 +88,23 @@ const farms: FarmConfig[] = [
   quoteTokenSymbol: QuoteToken.BUSD,
   quoteTokenAdresses: contracts.busd,
 },
+    {
+  pid: 11,
+  risk: 5,
+  isTokenOnly: true,
+  lpSymbol: 'MANGO',
+  lpAddresses: {
+    97: '',
+    56: '0xE5fE53149A278aF40ACb04334c4140eE7444BE4B', // EGG-BUSD LP
+  },
+  tokenSymbol: 'MANGO',
+  tokenAddresses: {
+    97: '',
+    56: '0x3D29cdB00CB183a0aEcEEa4fB73F55E1450af3d4',
+  },
+  quoteTokenSymbol: QuoteToken.BUSD,
+  quoteTokenAdresses: contracts.busd,
+},
    {
     pid: 2,
     risk: 1,
