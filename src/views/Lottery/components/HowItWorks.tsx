@@ -35,7 +35,7 @@ const HowItWorks = () => {
       <Text fontSize="16px">
         {TranslateString(
           999,
-          'Spend MANGO to buy tickets, contributing to the lottery pot. Win prizes if 2, 3, or 4 of your ticket numbers match the winning numbers and their exact order!',
+          'Spend KSWAP to buy tickets, contributing to the lottery pot. Win prizes if 2, 3, or 4 of your ticket numbers match the winning numbers and their exact order!',
         )}
       </Text>
       <StyledLink href="https://docs.mangoswap.finance/lottery-1">Read more</StyledLink>
