@@ -6,7 +6,7 @@ import useI18n from 'hooks/useI18n'
 import useAllEarnings from 'hooks/useAllEarnings'
 import CardValue from './CardValue'
 
-const MangoHarvestBalance = ({ earningsSum }) => {
+const KswapHarvestBalance = ({ earningsSum }) => {
   const TranslateString = useI18n()
   const { account } = useWallet()
 
@@ -21,4 +21,4 @@ const MangoHarvestBalance = ({ earningsSum }) => {
   return <CardValue value={earningsSum} />
 }
 
-export default MangoHarvestBalance
+export default KswapHarvestBalance
