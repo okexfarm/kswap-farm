@@ -31,7 +31,7 @@ const Lottery: React.FC = () => {
   const [mostRecentLotteryNumber, setMostRecentLotteryNumber] = useState(1)
 
   useEffect(() => {
-    fetch(`https://api.mangoswap.com/api/lotteryHistory`)
+    fetch(`https://api.Kswap.net/api/lotteryHistory`)
       .then((response) => response.json())
       .then((data) => setHistoryData(data))
       .catch(() => {
