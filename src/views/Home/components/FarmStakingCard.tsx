@@ -45,7 +45,7 @@ const FarmedStakingCard = () => {
   const TranslateString = useI18n()
   const farmsWithBalance = useFarmsWithBalance()
   const kswapBalance = getBalanceNumber(useTokenBalance(getKswapAddress()))
-  const kswapPrice = usePriceMangoBusd().toNumber()
+  const kswapPrice = usePriceKswapBusd().toNumber()
   const allEarnings = useAllEarnings()
   const earningsSum = allEarnings.reduce((accum, earning) => {
     return accum + new BigNumber(earning).div(new BigNumber(10).pow(18)).toNumber()
