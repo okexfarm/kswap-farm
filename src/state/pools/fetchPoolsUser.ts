@@ -62,7 +62,7 @@ export const fetchUserStakeBalances = async (account) => {
     name: 'userInfo',
     params: [account],
   }))
-  const userInfo = await multicall(mangoChefABI, calls)
+  const userInfo = await multicall(kswapChefABI, calls)
   const stakedBalances = nonMasterPools.reduce(
     (acc, pool, index) => ({
       ...acc,
@@ -83,7 +83,7 @@ export const fetchUserPendingRewards = async (account) => {
     name: 'pendingReward',
     params: [account],
   }))
-  const res = await multicall(mangoChefABI, calls)
+  const res = await multicall(kswapChefABI, calls)
   const pendingRewards = nonMasterPools.reduce(
     (acc, pool, index) => ({
       ...acc,
