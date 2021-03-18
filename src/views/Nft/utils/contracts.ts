@@ -12,7 +12,7 @@ export const getRabbitMintingContract = (contractOptions?: ContractOptions) => {
   return getContract(rabbitMintingFarmAbi, RABBIT_MINTING_FARM_ADDRESS, contractOptions)
 }
 
-export const getPanmangoRabbitContract = (contractOptions?: ContractOptions) => {
+export const getPankswapRabbitContract = (contractOptions?: ContractOptions) => {
   const kswapRabbitsAbi = (kswapRabbits as unknown) as AbiItem
   return getContract(kswapRabbitsAbi, PANKSWAP_RABBITS_ADDRESS, contractOptions)
 }
