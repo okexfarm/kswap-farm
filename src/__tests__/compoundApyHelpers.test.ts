@@ -1,12 +1,12 @@
 import { calculateKswapEarnedPerThousandDollars, apyModalRoi } from '../utils/compoundApyHelpers'
 
 it.each([
-  [{ numberOfDays: 1, farmApy: 365, mangoPrice: 1 }, 10],
-  [{ numberOfDays: 7, farmApy: 20, mangoPrice: 0.8 }, 4.8],
-  [{ numberOfDays: 40, farmApy: 212.21, mangoPrice: 1.2 }, 217.48],
-  [{ numberOfDays: 330, farmApy: 45.12, mangoPrice: 5 }, 100.67],
-  [{ numberOfDays: 365, farmApy: 100, mangoPrice: 0.2 }, 8572.84],
-  [{ numberOfDays: 365, farmApy: 20, mangoPrice: 1 }, 221.34],
+  [{ numberOfDays: 1, farmApy: 365, kswapPrice: 1 }, 10],
+  [{ numberOfDays: 7, farmApy: 20, kswapPrice: 0.8 }, 4.8],
+  [{ numberOfDays: 40, farmApy: 212.21, kswapPrice: 1.2 }, 217.48],
+  [{ numberOfDays: 330, farmApy: 45.12, kswapPrice: 5 }, 100.67],
+  [{ numberOfDays: 365, farmApy: 100, kswapPrice: 0.2 }, 8572.84],
+  [{ numberOfDays: 365, farmApy: 20, kswapPrice: 1 }, 221.34],
 ])('calculate kswap earned with values %o', ({ numberOfDays, farmApy, kswapPrice }, expected) => {
   expect(calculateKswapEarnedPerThousandDollars({ numberOfDays, farmApy, kswapPrice })).toEqual(expected)
 })
