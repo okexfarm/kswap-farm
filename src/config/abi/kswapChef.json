@@ -261,10 +261,10 @@
   },
   {
     "inputs": [],
-    "name": "mango",
+    "name": "kswap",
     "outputs": [
       {
-        "internalType": "contract MangoFarm",
+        "internalType": "contract Kswap",
         "name": "",
         "type": "address"
       }
