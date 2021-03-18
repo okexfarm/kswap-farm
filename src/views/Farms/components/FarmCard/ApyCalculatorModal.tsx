@@ -100,7 +100,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
         </GridItem>
         <GridItem>
           <Text>
-            {apyModalRoi({ amountEarned: kswapEarnedPerThousand30D, amountInvested: oneThousandDollarsWorthOfkswap })}%
+            {apyModalRoi({ amountEarned: kswapEarnedPerThousand30D, amountInvested: oneThousandDollarsWorthOfKswap })}%
           </Text>
         </GridItem>
         <GridItem>
