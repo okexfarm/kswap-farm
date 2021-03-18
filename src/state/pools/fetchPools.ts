@@ -58,7 +58,7 @@ export const fetchPoolsTotalStatking = async () => {
     }
   })
 
-  const nonBnbPoolsTotalStaked = await multicall(mangoABI, callsNonBnbPools)
+  const nonBnbPoolsTotalStaked = await multicall(kswapABI, callsNonBnbPools)
   const bnbPoolsTotalStaked = await multicall(wbnbABI, callsBnbPools)
 
   return [
