@@ -43,7 +43,7 @@ export const unstake = async (masterChefContract, pid, amount, account) => {
     })
 }
 
-export const mangoUnstake = async (kswapChefContract, amount, account) => {
+export const kswapUnstake = async (kswapChefContract, amount, account) => {
   // shit code: hard fix for old CTK and BLK
   if (kswapChefContract.options.address === '0x3B9B74f48E89Ebd8b45a53444327013a2308A9BC') {
     return kswapChefContract.methods
