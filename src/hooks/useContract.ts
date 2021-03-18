@@ -49,7 +49,7 @@ export const useRabbitMintingFarm = (address: string) => {
   return useContract(rabbitMintingFarmAbi, address)
 }
 
-export const usePanmangoRabbits = (address: string) => {
+export const usePankswapRabbits = (address: string) => {
   const kswapRabbitsAbi = (kswapRabbits as unknown) as AbiItem
   return useContract(kswapRabbitsAbi, address)
 }
