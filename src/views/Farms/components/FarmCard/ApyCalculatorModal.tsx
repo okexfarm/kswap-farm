@@ -45,7 +45,7 @@ const ApyCalculatorModal: React.FC<ApyCalculatorModalProps> = ({
   const TranslateString = useI18n()
   const liquidityUrlPathParts = getLiquidityUrlPathParts({ quoteTokenAdresses, quoteTokenSymbol, tokenAddresses })
   const farmApy = apy.times(new BigNumber(100)).toNumber()
-  const oneThousandDollarsWorthOfMango = 1000 / mangoPrice.toNumber()
+  const oneThousandDollarsWorthOfKswap = 1000 / kswapPrice.toNumber()
 
   const kswapEarnedPerThousand1D = calculateKswapEarnedPerThousandDollars({ numberOfDays: 1, farmApy, kswapPrice })
   const kswapEarnedPerThousand7D = calculateKswapEarnedPerThousandDollars({ numberOfDays: 7, farmApy, kswapPrice })
