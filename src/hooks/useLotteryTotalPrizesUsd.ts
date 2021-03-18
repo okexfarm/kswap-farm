@@ -1,4 +1,4 @@
-import { usePriceMangoBusd } from 'state/hooks'
+import { usePriceKswapBusd } from 'state/hooks'
 import { getBalanceNumber } from 'utils/formatBalance'
 import { useTotalRewards } from './useTickets'
 
