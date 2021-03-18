@@ -9,7 +9,7 @@ import useTokenBalance from 'hooks/useTokenBalance'
 import { useMultiClaimLottery } from 'hooks/useBuyLottery'
 import { useTotalClaim } from 'hooks/useTickets'
 import BuyModal from 'views/Lottery/components/TicketCard/BuyTicketModal'
-import MangoWinnings from './MangoWinnings'
+import KswapWinnings from './KswapWinnings'
 import LotteryJackpot from './LotteryJackpot'
 
 const StyledLotteryCard = styled(Card)`
@@ -46,7 +46,7 @@ const FarmedStakingCard = () => {
   const TranslateString = useI18n()
   const { claimAmount } = useTotalClaim()
   const { onMultiClaim } = useMultiClaimLottery()
-  const mangoBalance = useTokenBalance(getMangoAddress())
+  const kswapBalance = useTokenBalance(getKswapAddress())
 
   const handleClaim = useCallback(async () => {
     try {
@@ -61,7 +61,7 @@ const FarmedStakingCard = () => {
     }
   }, [onMultiClaim, setRequestedClaim])
 
-  const [onPresentBuy] = useModal(<BuyModal max={mangoBalance} tokenName="MANGO" />)
+  const [onPresentBuy] = useModal(<BuyModal max={mangoBalance} tokenName="KSWAP" />)
 
   return (
     <StyledLotteryCard>
@@ -69,10 +69,10 @@ const FarmedStakingCard = () => {
         <Heading size="xl" mb="24px">
           {TranslateString(550, 'Your Lottery Winnings')}
         </Heading>
-        <CardImage src="/images/ticket.svg" alt="mango logo" width={64} height={64} />
+        <CardImage src="/images/ticket.svg" alt="kswap logo" width={64} height={64} />
         <Block>
-          <MangoWinnings />
-          <Label>{TranslateString(552, 'MANGO to Collect')}</Label>
+          <KswapWinnings />
+          <Label>{TranslateString(552, 'KSWAP to Collect')}</Label>
         </Block>
         <Block>
           <LotteryJackpot />
