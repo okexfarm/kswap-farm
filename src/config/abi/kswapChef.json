@@ -2,7 +2,7 @@
   {
     "inputs": [
       {
-        "internalType": "contract MangoFarm",
+        "internalType": "contract Kswap",
         "name": "_kswap",
         "type": "address"
       },
