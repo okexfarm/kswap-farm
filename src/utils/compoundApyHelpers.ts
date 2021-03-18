@@ -1,6 +1,6 @@
 const roundToTwoDp = (number) => Math.round(number * 100) / 100
 
-export const calculateKswapEarnedPerThousandDollars = ({ numberOfDays, farmApy, KswapPrice }) => {
+export const calculateKswapEarnedPerThousandDollars = ({ numberOfDays, farmApy, kswapPrice }) => {
   // Everything here is worked out relative to a year, with the asset compounding daily
   const timesCompounded = 365
   //   We use decimal values rather than % in the math for both APY and the number of days being calculates as a proportion of the year
