@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Heading, CardBody, CardFooter, KswapRoundIcon, TicketRound } from '@mangofarm/uikit'
+import { Heading, CardBody, CardFooter, MangoRoundIcon, TicketRound } from '@mangofarm/uikit'
 import useI18n from 'hooks/useI18n'
 import { DataResponse } from 'utils/getLotteryRoundData'
 import LotteryCardHeading from '../LotteryCardHeading'
@@ -55,7 +55,7 @@ const PastRoundCardDetails: React.FC<PastRoundCardDetailsProps> = ({ data }) => 
             </TopLotteryCardHeading>
             <LotteryCardHeading
               valueToDisplay={TranslateString(999, `${poolSize.toLocaleString()} KSWAP`)}
-              Icon={KswapRoundIcon}
+              Icon={MangoRoundIcon}
             >
               {TranslateString(999, 'Total prizes')}
             </LotteryCardHeading>
