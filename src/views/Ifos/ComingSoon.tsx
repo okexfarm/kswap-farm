@@ -63,12 +63,12 @@ const ComingSoon = () => {
               )}
             </Text>
             <Text mb={3}>
-              <LiquidityLink href="https://exchange.mangoswap.finance/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
-                {TranslateString(506, 'Get MANGO-BNB LP >')}
+              <LiquidityLink href="https://exchange.kswap.net/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
+                {TranslateString(506, 'Get KSWAP-BNB LP >')}
               </LiquidityLink>
             </Text>
             <Text mb={3}>
-              {TranslateString(508, 'The project gets the BNB, PanmangoSwap burns the MANGO.')}
+              {TranslateString(508, 'The project gets the BNB, PankswapSwap burns the KSWAP.')}
               <br />
               <strong>{TranslateString(510, 'You get the tokens.')}</strong>
             </Text>
