@@ -11,7 +11,7 @@ export interface Ifo {
   launchTime: string
   saleAmount: string
   raiseAmount: string
-  mangoToBurn: string
+  kswapToBurn: string
   projectSiteUrl: string
   currency: string
   currencyAddress: string
