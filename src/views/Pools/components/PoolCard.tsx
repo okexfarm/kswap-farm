@@ -73,7 +73,7 @@ const PoolCard: React.FC<HarvestProps> = ({ pool }) => {
 
   const blocksUntilStart = Math.max(startBlock - block, 0)
   const blocksRemaining = Math.max(endBlock - block, 0)
-  const isOldJuice = stakingTokenName === QuoteToken.MANGO
+  const isOldJuice = stakingTokenName === QuoteToken.KSWAP
   const accountHasStakedBalance = stakedBalance?.toNumber() > 0
   const needsApproval = !accountHasStakedBalance && !allowance.toNumber() && !isBnbPool
   const isCardActive = isFinished && accountHasStakedBalance
