@@ -57,7 +57,7 @@ const KswapStats = () => {
         </Row>
         <Row>
           <Text fontSize="14px">{TranslateString(10004, 'Circulating Supply')}</Text>
-          {kswapSupply && <CardValue fontSize="14px" value={mangoSupply} decimals={0} />}
+          {kswapSupply && <CardValue fontSize="14px" value={kswapSupply} decimals={0} />}
         </Row>
         <Row>
           <Text fontSize="14px">{TranslateString(540, 'New KSWAP/block')}</Text>
