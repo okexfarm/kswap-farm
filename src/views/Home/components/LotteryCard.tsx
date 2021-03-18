@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react'
 import styled from 'styled-components'
 import { Heading, Card, CardBody, Button, useModal } from '@mangofarm/uikit'
-import { getMangoAddress } from 'utils/addressHelpers'
+import { getKswapAddress } from 'utils/addressHelpers'
 import { getBalanceNumber } from 'utils/formatBalance'
 import useI18n from 'hooks/useI18n'
 import useGetLotteryHasDrawn from 'hooks/useGetLotteryHasDrawn'
@@ -61,7 +61,7 @@ const FarmedStakingCard = () => {
     }
   }, [onMultiClaim, setRequestedClaim])
 
-  const [onPresentBuy] = useModal(<BuyModal max={mangoBalance} tokenName="KSWAP" />)
+  const [onPresentBuy] = useModal(<BuyModal max={kswapBalance} tokenName="KSWAP" />)
 
   return (
     <StyledLotteryCard>
