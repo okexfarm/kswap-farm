@@ -1,7 +1,7 @@
 import { AbiItem } from 'web3-utils'
 import poolsConfig from 'config/constants/pools'
 import masterChefABI from 'config/abi/masterchef.json'
-import kswapChefABI from 'config/abi/mangoChef.json'
+import kswapChefABI from 'config/abi/kswapChef.json'
 import erc20ABI from 'config/abi/erc20.json'
 import { QuoteToken } from 'config/constants/types'
 import multicall from 'utils/multicall'
