@@ -52,10 +52,10 @@ const Ifo = () => {
             <li>{TranslateString(598, 'Get KSWAP-BNB LP tokens by adding KSWAP and BNB liquidity')}</li>
           </List>
           <Flex mb="16px">
-            <LinkExternal href="https://exchange.mangoswap.finance/#/swap" mr="16px">
-              {TranslateString(999, 'Buy mango')}
+            <LinkExternal href="https://exchange.kswap.net/#/swap" mr="16px">
+              {TranslateString(999, 'Buy kswap')}
             </LinkExternal>
-            <LinkExternal href="https://exchange.mangoswap.finance/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
+            <LinkExternal href="https://exchange.kswap.net/#/add/ETH/0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82">
               {TranslateString(999, 'Get LP tokens')}
             </LinkExternal>
           </Flex>
@@ -72,7 +72,7 @@ const Ifo = () => {
             <Button
               as="a"
               variant="secondary"
-              href="https://docs.mangoswap.finance/core-products/ifo-initial-farm-offering"
+              href="https://docs.kswap.net/core-products/ifo-initial-farm-offering"
             >
               {TranslateString(610, 'Read more')}
             </Button>
