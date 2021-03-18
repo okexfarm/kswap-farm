@@ -38,7 +38,7 @@ const HowItWorks = () => {
           'Spend KSWAP to buy tickets, contributing to the lottery pot. Win prizes if 2, 3, or 4 of your ticket numbers match the winning numbers and their exact order!',
         )}
       </Text>
-      <StyledLink href="https://docs.mangoswap.finance/lottery-1">Read more</StyledLink>
+      <StyledLink href="https://docs.kswap.net/lottery-1">Read more</StyledLink>
     </LayoutWrapper>
   )
 }
