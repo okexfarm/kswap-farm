@@ -86,8 +86,7 @@ const BuyTicketModal: React.FC<BuyTicketModalProps> = ({ max, onDismiss }) => {
             'Ticket purchases are final. Your KSWAP cannot be returned to you after buying tickets.',
           )}
         </Announce>
-        <Final>{TranslateString(460, `You will spend: ${      <StyledLink href="https://docs.kwsap.net/lottery-1">Read more</StyledLink>
-Costs(val)} KSWAP`)}</Final>
+        <Final>{TranslateString(460, `You will spend: ${kswapCosts(val)} KSWAP`)}</Final>
       </div>
       <ModalActions>
         <Button fullWidth variant="secondary" onClick={onDismiss}>
