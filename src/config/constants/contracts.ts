@@ -1,8 +1,10 @@
 export default {
   kswap: {
+    97: '0x0fc64a803745275971fE40028196E9DDd684945B',
     56: '0xFd53F26Cb14aAa4AA90a32B7e9bd9B12D3D42Ec7',
   },
   masterChef: {
+    97: '0xDd1a65131CE4Dc513186f22C7BaB71F2473A8873',
     56: '0x59B58b7B249838f498d56f9D7FFEe16E32b9E7C0',
   },
   wbnb: {
