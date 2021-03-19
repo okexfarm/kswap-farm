@@ -6,12 +6,12 @@ const farms: FarmConfig[] = [
     {
     pid: 0,
     risk: 2,
-    lpSymbol: 'MANGO-BUSD LP',
+    lpSymbol: 'KSWAP-BUSD LP',
     lpAddresses: {
       97: '',
       56: '0x623f10546a0286f3888363Dac33451C8832ef838',
     },
-    tokenSymbol: 'MANGO',
+    tokenSymbol: 'KSWAP',
     tokenAddresses: {
       97: '',
       56: '0xFd53F26Cb14aAa4AA90a32B7e9bd9B12D3D42Ec7',
@@ -40,12 +40,12 @@ const farms: FarmConfig[] = [
     {
      pid: 10,
      risk: 2,
-     lpSymbol: 'MANGO-USDT LP',
+     lpSymbol: 'KSWAP-USDT LP',
      lpAddresses: {
        97: '',
        56: '0x4aB5135A7f7A814a67a3F0638e42F55C7caE2F69',
      },
-     tokenSymbol: 'MANGO',
+     tokenSymbol: 'KSWAP',
      tokenAddresses: {
        97: '',
        56: '0x3D29cdB00CB183a0aEcEEa4fB73F55E1450af3d4',
