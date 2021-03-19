@@ -9,12 +9,12 @@ const farms: FarmConfig[] = [
     lpSymbol: 'MANGO-BUSD LP',
     lpAddresses: {
       97: '',
-      56: '0xE5fE53149A278aF40ACb04334c4140eE7444BE4B',
+      56: '0x623f10546a0286f3888363Dac33451C8832ef838',
     },
     tokenSymbol: 'MANGO',
     tokenAddresses: {
       97: '',
-      56: '0x3D29cdB00CB183a0aEcEEa4fB73F55E1450af3d4',
+      56: '0xFd53F26Cb14aAa4AA90a32B7e9bd9B12D3D42Ec7',
     },
     quoteTokenSymbol: QuoteToken.BUSD,
     quoteTokenAdresses: contracts.busd,
@@ -26,12 +26,12 @@ const farms: FarmConfig[] = [
     lpSymbol: 'MANGO-BNB LP',
     lpAddresses: {
       97: '',
-      56: '0xB0361a92E2646F9F11f1670484f09D585fe4a419',
+      56: '0x269Eb6fa30745f78c3a6ace8f03803387594f194',
     },
     tokenSymbol: 'MANGO',
     tokenAddresses: {
       97: '',
-      56: '0x3D29cdB00CB183a0aEcEEa4fB73F55E1450af3d4',
+      56: '0xFd53F26Cb14aAa4AA90a32B7e9bd9B12D3D42Ec7',
     },
     quoteTokenSymbol: QuoteToken.BNB,
     quoteTokenAdresses: contracts.wbnb,
