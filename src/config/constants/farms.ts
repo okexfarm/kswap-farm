@@ -220,13 +220,13 @@ const farms: FarmConfig[] = [
   isTokenOnly: true,
   lpSymbol: 'KSWAP',
   lpAddresses: {
-    97: '',
-    56: '0xE5fE53149A278aF40ACb04334c4140eE7444BE4B', // EGG-BUSD LP
+    97: '0x0fc64a803745275971fE40028196E9DDd684945B',
+    56: '', // EGG-BUSD LP
   },
   tokenSymbol: 'KSWAP',
   tokenAddresses: {
-    97: '',
-    56: '0x3D29cdB00CB183a0aEcEEa4fB73F55E1450af3d4',
+    97: '0x0fc64a803745275971fE40028196E9DDd684945B',
+    56: '',
   },
   quoteTokenSymbol: QuoteToken.BUSD,
   quoteTokenAdresses: contracts.busd,
