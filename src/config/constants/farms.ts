@@ -4,7 +4,7 @@ import { FarmConfig, QuoteToken } from './types'
 const farms: FarmConfig[] = [
 
     {
-    pid: 0,
+    pid: 11,
     risk: 2,
     lpSymbol: 'MANGO-BUSD LP',
     lpAddresses: {
@@ -215,7 +215,7 @@ const farms: FarmConfig[] = [
  quoteTokenAdresses: contracts.wbnb,
 },
 {
-  pid: 11,
+  pid: 0,
   risk: 5,
   isTokenOnly: true,
   lpSymbol: 'MANGO',
