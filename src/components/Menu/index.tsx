@@ -25,7 +25,7 @@ const Menu = (props) => {
       setLang={setSelectedLanguage}
       kswapPriceUsd={kswapPriceUsd.toNumber()}
       links={config}
-      priceLink="https://info.cheeseswap.app/pair/0xB0361a92E2646F9F11f1670484f09D585fe4a419"
+      priceLink="https://pancakeswap.info/token/0xFd53F26Cb14aAa4AA90a32B7e9bd9B12D3D42Ec7"
       {...props}
     />
   )
